@@ -44,23 +44,23 @@ try {
   - : Una expresión condicional.
 
 - `finally_statements`
-  - : Sentencias que se ejecutan después de que se completa la declaración `try` . Estas sentencias se ejecutan independientemente de si una excepcion fue lanzada o capturada.
+  - : Sentencias que se ejecutan después de que se completa la declaración `try` . Estas sentencias se ejecutan independientemente de si una excepción fue lanzada o capturada.
 
 ## Descripción
 
-La sentencia `try` consiste en un bloque `try` que contiene una o más sentencias. Las llaves `{}` se deben utilizar siempre `,` incluso para una bloques de una sola sentencia. Al menos un bloque `catch` o un bloque `finally` debe estar presente. Esto nos da tres formas posibles para la sentencia `try`:
+La sentencia `try` consiste en un bloque `try` que contiene una o más sentencias. Las llaves `{}` se deben utilizar siempre `,` incluso para bloques de una sola sentencia. Al menos un bloque `catch` o un bloque `finally` debe estar presente. Esto nos da tres formas posibles para la sentencia `try`:
 
 1. `try...catch`
 2. `try...finally`
 3. `try...catch...finally`
 
-Un bloque `catch` contiene sentencias que especifican que hacer si una excepción es lanzada en el bloque `try`. Si cualquier sentencia dentro del bloque `try` (o en una funcion llamada desde dentro del bloque `try`) lanza una excepción, el control cambia inmediatamente al bloque `catch` . Si no se lanza ninguna excepcion en el bloque `try`, el bloque `catch` se omite.
+Un bloque `catch` contiene sentencias que especifican qué hacer si una excepción es lanzada en el bloque `try`. Si cualquier sentencia dentro del bloque `try` (o en una función llamada desde dentro del bloque `try`) lanza una excepción, el control cambia inmediatamente al bloque `catch` . Si no se lanza ninguna excepción en el bloque `try`, el bloque `catch` se omite.
 
-La bloque `finally` se ejecuta despues del bloque `try` y el/los bloque(s) `catch` hayan finalizado su ejecución. Éste bloque siempre se ejecuta, independientemente de si una excepción fue lanzada o capturada.
+El bloque `finally` se ejecuta después de que el bloque `try` y el o los bloques `catch` hayan finalizado su ejecución. Este bloque siempre se ejecuta, independientemente de si una excepción fue lanzada o capturada.
 
 Puede anidar una o más sentencias `try`. Si una sentencia `try` interna no tiene una bloque `catch`, se ejecuta el bloque `catch` de la sentencia `try` que la encierra.
 
-Usted también puede usar la declaración `try` para manejar excepciones de JavaScript. Consulte la [Guía de JavaScript](/es/docs/Web/JavaScript/Guide) para obtener mayor información sobre excepciones de JavaScript.
+Usted también puede usar la declaración `try` para manejar excepciones de JavaScript. Consulte la [Guía de JavaScript](/es/docs/Web/JavaScript/Guide) para obtener más información sobre excepciones de JavaScript.
 
 ### Bloque catch incondicional
 
