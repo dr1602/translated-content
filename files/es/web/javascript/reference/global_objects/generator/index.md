@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Generator
 
 {{JSRef}}
 
-El objeto `Generator` es retornado por una {{jsxref("Statements/function*", "función generator", "", 1)}} y es conformado tanto el protocolo iterable como el protocolo iterador.
+El objeto `Generator` es retornado por una {{jsxref("Statements/function*", "función generator", "", 1)}} y se ajusta tanto al protocolo iterable como al protocolo iterador.
 
 ## Constructor
 
@@ -23,7 +23,7 @@ var g = gen(); // "Generator { }"
 
 ## Métodos de instanciación
 
-_Tambien hereda propiedades de {{JSxRef("Iterator")}}._
+_También hereda propiedades de {{JSxRef("Iterator")}}._
 
 - {{jsxref("Generator.prototype.next()")}}
   - : Retorna el valor ofrecido por la expresión {{jsxref("Operators/yield", "yield")}}
@@ -34,11 +34,11 @@ _Tambien hereda propiedades de {{JSxRef("Iterator")}}._
 
 ## Propiedades
 
-_Tambien hereda propiedades de {{JSxRef("Iterator")}}._
+_También hereda propiedades de {{JSxRef("Iterator")}}._
 
 - `Generator.prototype.constructor`
 
-  - : Especifica la funciòn que construye el prototipo del objeto.
+  - : Especifica la función que construye el prototipo del objeto.
 
 - `Generator.prototype[@@toStringTag]`
   - : La cadena `"Generator"`.
@@ -63,18 +63,18 @@ console.log(gen.next().value); // 2
 
 ## Objetos generadores legados
 
-Firefox(SpiderMonkey) tambén implementa una versión mas temprana de generadores en JavaScript 1.7, donde el asterisco (\*) en la declaración de la funcion no era necesario(sólo use la palabra reservada yield en el cuerpo de la función). Sin embargo, los generadores legados se encuentran depreciados. No los use. Serán removidos ([Error 1083482 en Firefox](https://bugzil.la/1083482)).
+Firefox (SpiderMonkey) también implementa una versión mas temprana de generadores en JavaScript 1.7, donde el asterisco (\*) en la declaración de la función no era necesario (sólo use la palabra reservada yield en el cuerpo de la función). Sin embargo, los generadores legados se encuentran obsoletos. No los use. Serán removidos ([Error 1083482 en Firefox](https://bugzil.la/1083482)).
 
 ### Métodos de generadores legados
 
 - `Generator.prototype.next()` {{non-standard_inline}}
   - : Retorna el valor ofrecido por la expresión {{jsxref("Operators/yield", "yield")}}. Esto se corresponde con el método next() en el objeto generador de ES2015.
 - `Generator.prototype.close()` {{non-standard_inline}}
-  - : Cierra el generador. Sí el método next() es llamado por la expresión {{jsxref("StopIteration")}}, un error será lanzado. Esto se corresponde con el método return() del objeto generador de ES2015.
+  - : Cierra el generador. Si el método next() es llamado por la expresión {{jsxref("StopIteration")}}, un error será lanzado. Esto se corresponde con el método return() del objeto generador de ES2015.
 - `Generator.prototype.send()` {{non-standard_inline}}
-  - : Utilizado para enviar un valor al generador. El valor es retornado por la expresion {{jsxref("Operators/yield", "yield")}}, y retorna el valor ofrecido por la siguiente expresion {{jsxref("Operators/yield", "yield")}}. `send(x)` Se corresponde a `next(x)` en el objeto generador de ECMAScript 2015.
+  - : Utilizado para enviar un valor al generador. El valor es retornado por la expresión {{jsxref("Operators/yield", "yield")}}, y retorna el valor ofrecido por la siguiente expresión {{jsxref("Operators/yield", "yield")}}. `send(x)` Se corresponde a `next(x)` en el objeto generador de ECMAScript 2015.
 - `Generator.prototype.throw()` {{non-standard_inline}}
-  - : Lanza un error al generador. Esto se corresponde con el metodo throw() en el objeto genererador de ES2015.
+  - : Lanza un error al generador. Esto se corresponde con el método throw() en el objeto genererador de ES2015.
 
 ### Ejemplo de generador legado
 
